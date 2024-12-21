@@ -15,6 +15,7 @@ export default {
         primaryForeground: "var(--primary-foreground)",
         secondaryForeground: "var(--secondary-foreground)",
         primaryAccent: "var(--primary-accent)",
+        primaryBorder:"var(--primary-border)"
       },
     },
   },

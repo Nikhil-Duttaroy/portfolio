@@ -1,16 +1,26 @@
+import Card from "@/components/Card.component";
+
 export default function Home() {
   return (
-    // <main className="w-full h-dvh p-4">
-    //   <h1>Initial Setup</h1>
-    // </main>
-
-    <div className=" w-full h-dvh p-8 grid grid-cols-12 grid-rows-9 gap-4 bg-darkBackground">
-      <div className="col-span-3 row-span-9 bg-primaryBackground broder border-primaryAccent rounded-3xl"></div>
-      <div className="col-span-4 row-span-5 col-start-4 bg-primaryBackground broder border-primaryAccent rounded-3xl"></div>
-      <div className="col-span-4 row-span-4 col-start-4 row-start-6 bg-primaryBackground broder border-primaryAccent rounded-3xl"></div>
-      <div className="col-span-4 row-span-5 col-start-8 row-start-1 bg-primaryBackground broder border-primaryAccent rounded-3xl"></div>
-      <div className="col-span-3 row-span-3 col-start-8 row-start-6 bg-primaryBackground broder border-primaryAccent rounded-3xl"></div>
-      <div className="col-start-12 row-start-9 rounded-3xl"></div>
+    <div className=" w-full h-dvh p-12 grid sm:grid-cols-1 sm:grid-rows-auto md:grid-cols-12 md:grid-rows-9 gap-4 bg-darkBackground">
+      <Card className="col-span-3 row-span-5">Tech Stack</Card>
+      <Card className="col-span-3 row-span-4 row-start-6">Think</Card>
+      <Card className="col-span-2 row-span-2 col-start-4 ">Projects Count</Card>
+      <Card className="col-span-2 row-span-2 col-start-6">Experience</Card>
+      <Card className="col-span-4 row-span-4 col-start-4 row-start-3">
+        Intro
+      </Card>
+      <Card className="col-span-4 row-span-3 col-start-4 row-start-7">
+        Socials
+      </Card>
+      <Card className="col-span-6 row-span-6 col-start-8 row-start-1">
+        Projects
+      </Card>
+      <Card className="col-span-6 row-span-3 col-start-8 row-start-7">
+        Work Together
+      </Card>
+      {/* Terminal Popup Button */}
+      <div className="absolute bottom-4 right-4 bg-primaryAccent size-8 rounded-xl"></div>
     </div>
   );
 }
