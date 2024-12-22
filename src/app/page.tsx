@@ -1,5 +1,6 @@
 import Card from "@/components/Card.component";
 import ExperienceCounter from "@/components/ExperinceCounter.component";
+import IntroCard from "@/components/IntroCard.component";
 import ProjectCounter from "@/components/ProjectCounter.component";
 import TechStackCard from "@/components/TechStackCard.component";
 
@@ -9,9 +10,7 @@ export default function Home() {
       <TechStackCard />
       <ProjectCounter />
       <ExperienceCounter />
-      <Card className="col-span-4 row-span-4 col-start-4 row-start-3">
-        Intro
-      </Card>
+      <IntroCard />
       <Card className="col-span-4 row-span-3 col-start-4 row-start-7">
         Socials
       </Card>
