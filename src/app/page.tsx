@@ -1,10 +1,10 @@
 import Card from "@/components/Card.component";
+import TechStackCard from "@/components/TechStackCard.component";
 
 export default function Home() {
   return (
     <div className=" w-full h-dvh p-12 grid sm:grid-cols-1 sm:grid-rows-auto md:grid-cols-12 md:grid-rows-9 gap-4 bg-darkBackground">
-      <Card className="col-span-3 row-span-5">Tech Stack</Card>
-      <Card className="col-span-3 row-span-4 row-start-6">Think</Card>
+      <TechStackCard />
       <Card className="col-span-2 row-span-2 col-start-4 ">Projects Count</Card>
       <Card className="col-span-2 row-span-2 col-start-6">Experience</Card>
       <Card className="col-span-4 row-span-4 col-start-4 row-start-3">
