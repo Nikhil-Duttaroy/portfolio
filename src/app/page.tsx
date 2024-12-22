@@ -8,7 +8,7 @@ import TechStackCard from "@/components/TechStackCard.component";
 
 export default function Home() {
   return (
-    <div className=" w-full h-dvh p-12 grid sm:grid-cols-1 sm:grid-rows-auto md:grid-cols-12 md:grid-rows-9 gap-4 bg-darkBackground">
+    <div className=" w-full h-dvh p-12 flex flex-col md:grid md:grid-cols-12 md:grid-rows-9 gap-4 bg-darkBackground">
       <TechStackCard />
       <ProjectCounter />
       <ExperienceCounter />
@@ -19,7 +19,7 @@ export default function Home() {
       </Card>
       <ConnectCard />
       {/* Terminal Popup Button */}
-      <div className="absolute bottom-4 right-4 bg-primaryAccent size-8 rounded-xl"></div>
+      <div className="fixed bottom-4 right-4 bg-primaryAccent size-8 rounded-xl"></div>
     </div>
   );
 }
