@@ -1,4 +1,5 @@
 import Card from "@/components/Card.component";
+import ConnectCard from "@/components/ConnectCard.component";
 import ExperienceCounter from "@/components/ExperinceCounter.component";
 import IntroCard from "@/components/IntroCard.component";
 import ProjectCounter from "@/components/ProjectCounter.component";
@@ -16,9 +17,7 @@ export default function Home() {
       <Card className="col-span-6 row-span-6 col-start-8 row-start-1">
         Projects
       </Card>
-      <Card className="col-span-6 row-span-3 col-start-8 row-start-7">
-        Work Together
-      </Card>
+      <ConnectCard />
       {/* Terminal Popup Button */}
       <div className="absolute bottom-4 right-4 bg-primaryAccent size-8 rounded-xl"></div>
     </div>
