@@ -13,6 +13,7 @@ const IntroCard = () => {
           width={100}
           height={100}
           className="object-cover w-[35%] aspect-square rounded-3xl"
+          priority
         />
         <div className="flex flex-col my-2 justify-between">
           <div className="text-secondaryForeground text-xs flex items-center justify-between gap-2">
