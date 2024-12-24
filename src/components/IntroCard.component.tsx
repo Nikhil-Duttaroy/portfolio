@@ -8,7 +8,7 @@ const IntroCard = () => {
     <Card className="col-span-4 row-span-4 col-start-4 row-start-3 flex flex-col">
       <div className=" w-full flex gap-4">
         <Image
-          src="/Nikhil.jpeg"
+          src="/assets/Nikhil.jpeg"
           alt="Profile Picture"
           width={100}
           height={100}
