@@ -10,9 +10,9 @@ interface CounterCardProps {
 
 const CounterCard = ({ count, icon: Icon, label }: CounterCardProps) => {
   return (
-    <Card className="col-span-2 row-span-2 flex flex-col justify-between items-center">
+    <Card className="col-span-2 row-span-2 flex flex-col justify-around items-center">
       <div className="flex justify-center items-center gap-2">
-        <h1 className="text-6xl">{count}</h1>
+        <h1 className="text-7xl">{count}</h1>
         <FaPlus className="text-primaryAccent" />
       </div>
       <span className="flex justify-center items-center gap-2 text-sm">
