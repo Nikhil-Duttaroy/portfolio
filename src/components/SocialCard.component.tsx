@@ -10,7 +10,7 @@ const SocialCard = () => {
         <FaRocket className="text-primaryAccent" size={24} />
         Online Presence
       </h1>
-      <div className="grid grid-cols-2 gap-4 transition-all cursor-default ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 transition-all cursor-default w-fit self-center">
         {socialLinks.map((tech) => (
           <a
             key={tech.name}
