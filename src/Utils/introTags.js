@@ -1,7 +1,6 @@
 import { FaLocationDot } from "react-icons/fa6";
-
 import { IoLanguage } from "react-icons/io5";
-import { FaFlag } from "react-icons/fa";
+import { FaFlag, FaDev } from "react-icons/fa";
 
 export const introTags = [
   {
@@ -13,11 +12,15 @@ export const introTags = [
     name: "English & Hindi",
   },
   {
-    icons: <FaFlag className="text-primaryAccent" />,
-    name: "FrontEnd Developer",
-  },
-  {
     icons: <span className="text-primaryAccent">@</span>,
     name: "Reliance Jio",
+  },
+  {
+    icons: <FaDev className="text-primaryAccent" />,
+    name: "Web Developer",
+  },
+  {
+    icons: <FaFlag className="text-primaryAccent" />,
+    name: "Front-End Developer",
   },
 ];
