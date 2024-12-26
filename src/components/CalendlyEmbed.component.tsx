@@ -5,6 +5,14 @@ interface CalendlyEmbedProps {
   text: string;
 }
 
+declare global {
+  interface Window {
+    Calendly: {
+      initPopupWidget: (options: { url: string }) => void;
+    };
+  }
+}
+
 const CalendlyEmbed = ({ url, text }: CalendlyEmbedProps) => {
   useEffect(() => {
     const head = document.querySelector("head");
