@@ -26,7 +26,8 @@ const ProjectsCard = () => {
               alt={project.name}
               width={100}
               height={100}
-              className="object-cover rounded-3xl aspect-[16/9] w-[80%]"
+              className="object-cover rounded-3xl aspect-[16/9]"
+              style={{ width: "auto", height: "auto" }}
               priority
             />
             <div className="flex flex-col gap-2 items-center">
