@@ -8,7 +8,7 @@ export const projectDetails = [
   },
   {
     id: 2,
-    name: "Voice Enabled E-commerce App",
+    name: "Shoppers Loop",
     imgLink: "/assets/Shoppers.png",
     siteLink: "https://shoppersloop.onrender.com/",
     githubLink: "https://github.com/Nikhil-Duttaroy/ShoopersLoop",
