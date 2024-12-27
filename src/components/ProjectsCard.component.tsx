@@ -1,20 +1,21 @@
 "use client";
 import React from "react";
-import Card from "./Card.component";
+import Card from "./Card/Card.component";
 import { FaBriefcase } from "react-icons/fa";
 import { projectDetails } from "../Utils/projectsDetails";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
+import CardTitle from "./Card/CardTitle.component";
+import CardList from "./Card/CardList.component";
 
 const ProjectsCard = () => {
   return (
     <Card className="col-span-6 row-span-6 col-start-8 row-start-1 flex flex-col items-center gap-8">
-      <h1 className="text-primaryForeground font-bold text-lg flex items-center gap-2">
-        <FaBriefcase className="text-primaryAccent" size={24} />
-        Projects
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 transition-all cursor-default overflow-y-auto overflow-x-hidden w-full">
-        {projectDetails.map((project) => (
+      <CardTitle title="Projects" icon={FaBriefcase} />
+      <CardList
+        items={projectDetails}
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 overflow-y-auto overflow-x-hidden w-full"
+        renderItem={(project) => (
           <a
             key={project.name}
             href={project.siteLink}
@@ -43,8 +44,8 @@ const ProjectsCard = () => {
               </button>
             </div>
           </a>
-        ))}
-      </div>
+        )}
+      />
     </Card>
   );
 };

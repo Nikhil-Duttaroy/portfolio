@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card.component";
+import Card from "./Card/Card.component";
 import Image from "next/image";
 import { FaDownload } from "react-icons/fa6";
 import { introTags } from "../Utils/introTags";

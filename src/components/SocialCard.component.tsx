@@ -1,17 +1,18 @@
 import React from "react";
-import Card from "./Card.component";
+import Card from "./Card/Card.component";
 import { socialLinks } from "../Utils/socialLinks";
 import { FaRocket } from "react-icons/fa";
+import CardTitle from "./Card/CardTitle.component";
+import CardList from "./Card/CardList.component";
 
 const SocialCard = () => {
   return (
     <Card className="col-span-4 row-span-3 col-start-4 row-start-7 flex flex-col gap-8 ">
-      <h1 className="text-primaryForeground font-bold text-lg flex items-center gap-2 self-center">
-        <FaRocket className="text-primaryAccent" size={24} />
-        Online Presence
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 transition-all cursor-default w-fit self-center">
-        {socialLinks.map((tech) => (
+      <CardTitle title="Online Presence" icon={FaRocket} />
+      <CardList
+        items={socialLinks}
+        className="grid grid-cols-1 md:grid-cols-2 w-fit self-center"
+        renderItem={(tech) => (
           <a
             key={tech.name}
             href={tech.url}
@@ -21,8 +22,8 @@ const SocialCard = () => {
             {tech.icons}
             <span>{tech.name}</span>
           </a>
-        ))}
-      </div>
+        )}
+      />
     </Card>
   );
 };

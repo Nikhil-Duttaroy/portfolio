@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Card from "./Card.component";
+import Card from "./Card/Card.component";
 
 const API_URL = "https://numbersapi.p.rapidapi.com/6/21/date";
 const API_OPTIONS: {

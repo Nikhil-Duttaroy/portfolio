@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card.component";
+import Card from "./Card/Card.component";
 import { FaPlus } from "react-icons/fa";
 
 interface CounterCardProps {

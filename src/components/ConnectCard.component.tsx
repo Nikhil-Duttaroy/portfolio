@@ -1,18 +1,19 @@
 "use client";
 import React from "react";
-import Card from "./Card.component";
+import Card from "./Card/Card.component";
 import { HiMiniSquare3Stack3D } from "react-icons/hi2";
 import { connectLinks } from "../Utils/connectLinks";
+import CardTitle from "./Card/CardTitle.component";
+import CardList from "./Card/CardList.component";
 
 const ConnectCard = () => {
   return (
     <Card className="col-span-6 row-span-2 col-start-8 row-start-7 flex flex-col gap-8">
-      <h1 className="text-primaryForeground font-bold text-lg flex items-center gap-2 self-center">
-        <HiMiniSquare3Stack3D className="text-primaryAccent" size={24} />
-        Let&apos;s Work Together
-      </h1>
-      <div className="grid grid-cols-2 gap-4 transition-all cursor-default ">
-        {connectLinks.map((item) => (
+      <CardTitle title="Let's Work Together " icon={HiMiniSquare3Stack3D} />
+      <CardList
+        items={connectLinks}
+        className="grid grid-cols-2"
+        renderItem={(item) => (
           <div
             key={item.name}
             className="bg-secondaryBackground text-primaryForeground px-8 py-2 rounded-3xl flex justify-start items-center gap-4 group"
@@ -33,8 +34,8 @@ const ConnectCard = () => {
               </>
             )}
           </div>
-        ))}
-      </div>
+        )}
+      />
     </Card>
   );
 };
