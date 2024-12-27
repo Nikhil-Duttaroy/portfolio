@@ -4,6 +4,10 @@ import { FaFlag, FaDev } from "react-icons/fa";
 
 export const introTags = [
   {
+    icons: <FaFlag className="text-primaryAccent" />,
+    name: "nsdr2000@gmail.com",
+  },
+  {
     icons: <FaLocationDot className="text-primaryAccent" />,
     name: "India",
   },
@@ -18,9 +22,5 @@ export const introTags = [
   {
     icons: <FaDev className="text-primaryAccent" />,
     name: "Web Developer",
-  },
-  {
-    icons: <FaFlag className="text-primaryAccent" />,
-    name: "Front-End Developer",
   },
 ];
