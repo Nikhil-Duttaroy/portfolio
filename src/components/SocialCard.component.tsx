@@ -18,7 +18,7 @@ const SocialCard = () => {
             key={social.name}
             icon={social.icons}
             name={social.name}
-            className="px-8 py-2 justify-start items-center gap-4"
+            className="px-8 py-2 justify-start items-center gap-4 hover:text-primaryAccent hover:outline hover:outline-primaryAccent"
             url={social.url}
           />
         )}

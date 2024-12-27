@@ -13,7 +13,7 @@ const Pill = ({ icon: Icon, name, className, url }: PillProps) => {
       key={name}
       href={url}
       target="_blank"
-      className={`bg-secondaryBackground text-primaryForeground rounded-3xl flex  group ${className}`}
+      className={`bg-secondaryBackground text-primaryForeground rounded-3xl flex transition-all  ${className}`}
     >
       {Icon}
       <span>{name}</span>
@@ -21,7 +21,7 @@ const Pill = ({ icon: Icon, name, className, url }: PillProps) => {
   ) : (
     <div
       key={name}
-      className={`bg-secondaryBackground text-primaryForeground rounded-3xl flex  group ${className}`}
+      className={`bg-secondaryBackground text-primaryForeground rounded-3xl flex transition-all  ${className}`}
     >
       {Icon}
       <span>{name}</span>

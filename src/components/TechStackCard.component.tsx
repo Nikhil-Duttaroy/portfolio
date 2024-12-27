@@ -18,7 +18,7 @@ const TechStackCard = () => {
             key={item.name}
             icon={item.icons}
             name={item.name}
-            className="px-8 py-2 justify-start items-center gap-4"
+            className="px-8 py-2 justify-start items-center gap-4 cursor-default"
           />
         )}
       />

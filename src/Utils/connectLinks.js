@@ -6,10 +6,7 @@ export const connectLinks = [
   {
     icons: (
       <>
-        <RiCalendarScheduleFill
-          size={20}
-          className="group-hover:text-primaryAccent"
-        />
+        <RiCalendarScheduleFill size={20} />
         <CalendlyEmbed
           url="https://calendly.com/nsdr2000/30min"
           text="Schedule Call"
@@ -19,7 +16,7 @@ export const connectLinks = [
     name: "",
   },
   {
-    icons: <IoMdMail size={20} className="group-hover:text-primaryAccent" />,
+    icons: <IoMdMail size={20} />,
     name: "Email Me",
     url: "mailto:nsdr2000@gmail.com",
   },

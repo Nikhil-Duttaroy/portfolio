@@ -19,7 +19,7 @@ const ConnectCard = () => {
             key={item.name}
             icon={item.icons}
             name={item.name}
-            className=" px-6 py-2 justify-center items-center gap-4"
+            className=" px-6 py-2 justify-center items-center gap-4 hover:text-primaryAccent hover:outline hover:outline-primaryAccent"
             url={item.url}
           />
         )}

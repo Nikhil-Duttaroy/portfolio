@@ -12,53 +12,43 @@ import { SiRedux } from "react-icons/si";
 
 export const techStack = [
   {
-    icons: <IoLogoHtml5 size={20} className="group-hover:text-primaryAccent" />,
+    icons: <IoLogoHtml5 size={20} />,
     name: "HTML",
   },
   {
-    icons: <IoLogoCss3 size={20} className="group-hover:text-primaryAccent" />,
+    icons: <IoLogoCss3 size={20} />,
     name: "CSS",
   },
   {
-    icons: (
-      <IoLogoJavascript size={20} className="group-hover:text-primaryAccent" />
-    ),
+    icons: <IoLogoJavascript size={20} />,
     name: "JavaScript",
   },
   {
-    icons: (
-      <BiLogoTypescript size={20} className="group-hover:text-primaryAccent" />
-    ),
+    icons: <BiLogoTypescript size={20} />,
     name: "TypeScript",
   },
   {
-    icons: <IoLogoReact size={20} className="group-hover:text-primaryAccent" />,
+    icons: <IoLogoReact size={20} />,
     name: "React JS",
   },
   {
-    icons: (
-      <RiNextjsFill size={20} className="group-hover:text-primaryAccent" />
-    ),
+    icons: <RiNextjsFill size={20} />,
     name: "Next JS",
   },
   {
-    icons: (
-      <TbBrandSolidjs size={20} className="group-hover:text-primaryAccent" />
-    ),
+    icons: <TbBrandSolidjs size={20} />,
     name: "Solid JS",
   },
   {
-    icons: (
-      <RiTailwindCssFill size={20} className="group-hover:text-primaryAccent" />
-    ),
+    icons: <RiTailwindCssFill size={20} />,
     name: "Tailwind CSS",
   },
   {
-    icons: <SiRedux size={20} className="group-hover:text-primaryAccent" />,
+    icons: <SiRedux size={20} />,
     name: "Redux",
   },
   {
-    icons: <IoLogoFigma size={20} className="group-hover:text-primaryAccent" />,
+    icons: <IoLogoFigma size={20} />,
     name: "Figma",
   },
 ];
