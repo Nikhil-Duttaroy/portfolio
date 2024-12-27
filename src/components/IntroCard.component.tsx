@@ -4,7 +4,9 @@ import Image from "next/image";
 import { FaDownload } from "react-icons/fa6";
 import { introTags } from "../Utils/introTags";
 import Pill from "./Pill.component";
+import { motion } from "motion/react";
 const IntroCard = () => {
+  const text = "Software Developer".split("");
   return (
     <Card className="col-span-4 row-span-4 col-start-4 row-start-3 flex flex-col">
       <div className=" w-full flex gap-4">
@@ -37,9 +39,20 @@ const IntroCard = () => {
             <h1 className="font-bold text-xl lg:text-2xl">Nikhil Duttaroy</h1>
             <span className="text-primaryForeground text-sm">
               I&apos;m a{" "}
-              <span className="text-primaryAccent font-medium">
-                Software Developer{" "}
-              </span>
+              {text.map((el, i) => (
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    duration: 0.25,
+                    delay: i / 10,
+                  }}
+                  key={i}
+                  className="text-primaryAccent font-medium"
+                >
+                  {el}
+                </motion.span>
+              ))}
             </span>
           </div>
         </div>
