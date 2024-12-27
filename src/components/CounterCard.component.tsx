@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./Card/Card.component";
 import { FaPlus } from "react-icons/fa";
+import CalendlyEmbed from "./CalendlyEmbed.component";
 
 interface CounterCardProps {
   count: number; // The count to display
@@ -13,7 +14,10 @@ const CounterCard = ({ count, icon: Icon, label }: CounterCardProps) => {
     <Card className="col-span-2 row-span-2 flex flex-col justify-around items-center">
       <div className="flex justify-center items-center gap-2">
         <h1 className="text-7xl">{count}</h1>
-        <FaPlus className="text-primaryAccent" />
+        <CalendlyEmbed
+          url="https://calendly.com/nsdr2000/30min"
+          text={<FaPlus className="text-primaryAccent" />}
+        />
       </div>
       <span className="flex justify-center items-center gap-2 text-sm">
         <Icon size={18} className="text-primaryAccent" />

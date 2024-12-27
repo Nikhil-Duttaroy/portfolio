@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 interface CalendlyEmbedProps {
   url: string;
-  text: string;
+  text: string | React.ReactNode;
 }
 
 declare global {
