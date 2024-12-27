@@ -14,7 +14,7 @@ const ProjectsCard = () => {
       <CardTitle title="Projects" icon={FaBriefcase} />
       <CardList
         items={projectDetails}
-        className="grid grid-cols-1 md:grid-cols-2 gap-4 overflow-y-auto overflow-x-hidden w-full"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-4 overflow-y-auto overflow-x-hidden w-full"
         renderItem={(project) => (
           <a
             key={project.name}
@@ -32,7 +32,7 @@ const ProjectsCard = () => {
               priority
             />
             <div className="flex flex-col gap-2 items-center">
-              <span className="text-primaryForeground text-base md:text-xl font-semibold">
+              <span className="text-primaryForeground text-base lg:text-xl font-semibold">
                 {project.name}
               </span>
               <button

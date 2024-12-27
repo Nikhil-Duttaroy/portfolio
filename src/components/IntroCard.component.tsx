@@ -16,9 +16,9 @@ const IntroCard = () => {
           className="object-cover w-[35%] aspect-square rounded-3xl"
           priority
         />
-        <div className="flex flex-col my-2 justify-between gap-2 md:gap-0">
+        <div className="flex flex-col my-2 justify-between gap-2 lg:gap-0">
           <div className="text-secondaryForeground text-xs flex items-center justify-between gap-2">
-            <div className="flex justify-center items-center gap-2 text-xs md:text-sm">
+            <div className="flex justify-center items-center gap-2 text-xs lg:text-sm">
               <span className="bg-green-500 size-2 rounded-full "></span>
               Avaialble to Work
             </div>
@@ -30,7 +30,7 @@ const IntroCard = () => {
             </a>
           </div>
           <div className="flex flex-col gap-2">
-            <h1 className="font-bold text-xl md:text-2xl">Nikhil Duttaroy</h1>
+            <h1 className="font-bold text-xl lg:text-2xl">Nikhil Duttaroy</h1>
             <span className="text-primaryForeground text-sm">
               I&apos;m a{" "}
               <span className="text-primaryAccent font-medium">

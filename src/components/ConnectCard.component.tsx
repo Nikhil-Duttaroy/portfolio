@@ -13,13 +13,13 @@ const ConnectCard = () => {
       <CardTitle title="Let's Work Together " icon={HiMiniSquare3Stack3D} />
       <CardList
         items={connectLinks}
-        className="grid grid-cols-2"
+        className="grid grid-cols-1 lg:grid-cols-2"
         renderItem={(item) => (
           <Pill
             key={item.name}
             icon={item.icons}
             name={item.name}
-            className=" px-6 py-2 justify-center items-center gap-4 hover:text-primaryAccent hover:outline hover:outline-primaryAccent"
+            className="px-6 py-2 justify-center items-center gap-4 hover:text-primaryAccent hover:outline hover:outline-primaryAccent"
             url={item.url}
           />
         )}
