@@ -22,7 +22,11 @@ const IntroCard = () => {
               <span className="bg-green-500 size-2 rounded-full "></span>
               Avaialble to Work
             </div>
-            <a href="/Nikhil_Duttaroy.pdf" download>
+            <a
+              href="/Nikhil_Duttaroy.pdf"
+              download
+              className="bg-secondaryBackground px-2 py-1 rounded-md border border-primaryBorder hover:border-primaryAccent transition-all"
+            >
               <FaDownload
                 size={16}
                 className="text-primaryAccent cursor-pointer"
