@@ -3,6 +3,7 @@ import Card from "./Card/Card.component";
 import Image from "next/image";
 import { FaDownload } from "react-icons/fa6";
 import { introTags } from "../Utils/introTags";
+import Pill from "./Pill.component";
 const IntroCard = () => {
   return (
     <Card className="col-span-4 row-span-4 col-start-4 row-start-3 flex flex-col">
@@ -41,13 +42,12 @@ const IntroCard = () => {
       </div>
       <div className=" flex flex-wrap my-4 gap-2">
         {introTags.map((tag) => (
-          <div
+          <Pill
             key={tag.name}
-            className="bg-secondaryBackground text-primaryForeground rounded-3xl flex justify-start items-center gap-2 w-fit px-2 py-1"
-          >
-            {tag.icons}
-            <span className="text-xs md:text-sm">{tag.name}</span>
-          </div>
+            icon={tag.icons}
+            name={tag.name}
+            className="justify-start items-center w-fit px-2 py-1 gap-2"
+          />
         ))}
       </div>
     </Card>

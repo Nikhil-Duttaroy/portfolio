@@ -4,6 +4,7 @@ import { socialLinks } from "../Utils/socialLinks";
 import { FaRocket } from "react-icons/fa";
 import CardTitle from "./Card/CardTitle.component";
 import CardList from "./Card/CardList.component";
+import Pill from "./Pill.component";
 
 const SocialCard = () => {
   return (
@@ -12,16 +13,14 @@ const SocialCard = () => {
       <CardList
         items={socialLinks}
         className="grid grid-cols-1 md:grid-cols-2 w-fit self-center"
-        renderItem={(tech) => (
-          <a
-            key={tech.name}
-            href={tech.url}
-            target="_blank"
-            className="bg-secondaryBackground text-primaryForeground px-8 py-2 rounded-3xl flex justify-start items-center gap-4 group"
-          >
-            {tech.icons}
-            <span>{tech.name}</span>
-          </a>
+        renderItem={(social) => (
+          <Pill
+            key={social.name}
+            icon={social.icons}
+            name={social.name}
+            className="px-8 py-2 justify-start items-center gap-4"
+            url={social.url}
+          />
         )}
       />
     </Card>

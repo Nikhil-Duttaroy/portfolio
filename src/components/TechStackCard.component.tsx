@@ -4,6 +4,7 @@ import { techStack } from "../Utils/techStack";
 import { HiMiniSquare3Stack3D } from "react-icons/hi2";
 import CardTitle from "./Card/CardTitle.component";
 import CardList from "./Card/CardList.component";
+import Pill from "./Pill.component";
 
 const TechStackCard = () => {
   return (
@@ -13,13 +14,12 @@ const TechStackCard = () => {
         items={techStack}
         className="grid grid-cols-1"
         renderItem={(item) => (
-          <div
+          <Pill
             key={item.name}
-            className="bg-secondaryBackground text-primaryForeground px-8 py-2 rounded-3xl flex justify-start items-center gap-4 group"
-          >
-            {item.icons}
-            <span>{item.name}</span>
-          </div>
+            icon={item.icons}
+            name={item.name}
+            className="px-8 py-2 justify-start items-center gap-4"
+          />
         )}
       />
     </Card>

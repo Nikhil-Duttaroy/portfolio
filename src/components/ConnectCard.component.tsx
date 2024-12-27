@@ -5,6 +5,7 @@ import { HiMiniSquare3Stack3D } from "react-icons/hi2";
 import { connectLinks } from "../Utils/connectLinks";
 import CardTitle from "./Card/CardTitle.component";
 import CardList from "./Card/CardList.component";
+import Pill from "./Pill.component";
 
 const ConnectCard = () => {
   return (
@@ -14,26 +15,13 @@ const ConnectCard = () => {
         items={connectLinks}
         className="grid grid-cols-2"
         renderItem={(item) => (
-          <div
+          <Pill
             key={item.name}
-            className="bg-secondaryBackground text-primaryForeground px-8 py-2 rounded-3xl flex justify-start items-center gap-4 group"
-          >
-            {item.url ? (
-              <a
-                href={item.url}
-                target="_blank"
-                className="flex justify-center items-center gap-4"
-              >
-                {item.icons}
-                <span>{item.name}</span>
-              </a>
-            ) : (
-              <>
-                {item.icons}
-                {item.name}
-              </>
-            )}
-          </div>
+            icon={item.icons}
+            name={item.name}
+            className=" px-6 py-2 justify-center items-center gap-4"
+            url={item.url}
+          />
         )}
       />
     </Card>
