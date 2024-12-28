@@ -25,10 +25,9 @@ const ProjectsCard = () => {
             <Image
               src={project.imgLink}
               alt={project.name}
-              width={100}
+              width={120}
               height={100}
-              className="object-cover rounded-3xl aspect-viedo self-center w-full lg:w-auto"
-              style={{ width: "auto", height: "auto" }}
+              className="object-cover rounded-3xl aspect-viedo self-center"
               priority
             />
             <div className="flex flex-col gap-2 items-center justify-around h-full w-full">
