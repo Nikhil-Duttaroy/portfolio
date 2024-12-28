@@ -12,7 +12,7 @@ const TechStackCard = () => {
       <CardTitle title="Tech Arsenal" icon={HiMiniSquare3Stack3D} />
       <CardList
         items={techStack}
-        className="grid grid-cols-1"
+        className="grid grid-cols-1 landscapes:grid-cols-3"
         renderItem={(item) => (
           <Pill
             key={item.name}

@@ -8,6 +8,11 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'landscapes': {
+            'raw': `only screen and (max-height: 600px) and (orientation: landscape)`
+        },
+      },
       colors: {
         darkBackground: "var(--dark-background)",
         primaryBackground: "var(--primary-background)",

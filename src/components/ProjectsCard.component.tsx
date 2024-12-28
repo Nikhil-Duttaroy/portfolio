@@ -16,7 +16,7 @@ const ProjectsCard = () => {
       <CardTitle title="Projects" icon={FaBriefcase} />
       <CardList
         items={projectDetails}
-        className="grid grid-cols-1 lg:grid-cols-1 gap-4 overflow-y-auto overflow-x-hidden w-full"
+        className="grid grid-cols-1 lg:grid-cols-1 landscapes:grid-cols-2 gap-4 overflow-y-auto overflow-x-hidden w-full"
         renderItem={(project) => (
           <div
             key={project.name}
@@ -34,7 +34,7 @@ const ProjectsCard = () => {
             <div className="flex flex-col gap-2 items-center justify-around h-full w-full">
               <div className="text-primaryForeground text-base lg:text-xl font-semibold flex flex-col items-center lg:items-baseline">
                 {project.name}
-                <span className="text-secondaryForeground text-xs font-normal leading-3">
+                <span className="text-secondaryForeground text-xs font-normal leading-3 w-[90%] lg:w-full landscapes:w-full">
                   {project.description}
                 </span>
               </div>

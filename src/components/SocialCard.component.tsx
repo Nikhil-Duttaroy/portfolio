@@ -12,7 +12,7 @@ const SocialCard = () => {
       <CardTitle title="Online Presence" icon={FaRocket} />
       <CardList
         items={socialLinks}
-        className="grid grid-cols-1 lg:grid-cols-2 w-fit self-center"
+        className="grid grid-cols-1 lg:grid-cols-2 landscapes:grid-cols-2 w-fit self-center"
         renderItem={(social) => (
           <Pill
             key={social.name}

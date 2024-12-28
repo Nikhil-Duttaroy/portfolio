@@ -13,7 +13,7 @@ const ConnectCard = () => {
       <CardTitle title="Let's Work Together " icon={HiMiniSquare3Stack3D} />
       <CardList
         items={connectLinks}
-        className="grid grid-cols-1 lg:grid-cols-2"
+        className="grid grid-cols-1 lg:grid-cols-2 landscape:grid-cols-2"
         renderItem={(item) => (
           <Pill
             key={item.name}
