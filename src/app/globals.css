@@ -10,12 +10,14 @@
   --secondary-foreground:#999999;
   --primary-accent:#916CE7;
   --primary-border:#ffffff1b;
+  
 }
 
 body {
   color: var(--primary-foreground);
   background: var(--dark-background);
   font-family: Arial, Helvetica, sans-serif;
+  cursor: default;
 }
 ::-webkit-scrollbar {
   display: none;
