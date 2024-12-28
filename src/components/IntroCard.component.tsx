@@ -45,7 +45,7 @@ const IntroCard = () => {
                   animate={{ opacity: 1 }}
                   transition={{
                     duration: 0.25,
-                    delay: i / 10,
+                    delay: 0.7 + i / 10,
                   }}
                   key={i}
                   className="text-primaryAccent font-medium"
