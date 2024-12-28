@@ -7,7 +7,7 @@ import ProjectCounter from "@/components/ProjectCounter.component";
 import ProjectsCard from "@/components/ProjectsCard.component";
 import SocialCard from "@/components/SocialCard.component";
 import TechStackCard from "@/components/TechStackCard.component";
-import { FaTerminal } from "react-icons/fa";
+// import { FaTerminal } from "react-icons/fa";
 import { motion } from "motion/react";
 
 export default function Home() {
@@ -27,9 +27,9 @@ export default function Home() {
       <ConnectCard />
       <JokeCard />
       {/* Terminal Popup Button */}
-      <div className="fixed bottom-4 right-4 bg-primaryAccent size-8 rounded-xl flex items-center justify-center cursor-pointer">
+      {/* <div className="fixed bottom-4 right-4 bg-primaryAccent size-8 rounded-xl flex items-center justify-center cursor-pointer">
         <FaTerminal />
-      </div>
+      </div> */}
     </motion.div>
   );
 }
