@@ -9,11 +9,11 @@ import Pill from "./Pill.component";
 
 const ConnectCard = () => {
   return (
-    <Card className="col-span-6 row-span-2 col-start-8 row-start-7 flex flex-col gap-8">
+    <Card className="col-span-6 row-span-2 col-start-8 row-start-7 flex flex-col gap-6 ">
       <CardTitle title="Let's Work Together " icon={HiMiniSquare3Stack3D} />
       <CardList
         items={connectLinks}
-        className="grid grid-cols-1 lg:grid-cols-2 landscape:grid-cols-2"
+        className="flex flex-col lg:flex-row w-full justify-center"
         renderItem={(item) => (
           <Pill
             key={item.name}

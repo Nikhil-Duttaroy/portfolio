@@ -12,7 +12,7 @@ import Pill from "./Pill.component";
 
 const ProjectsCard = () => {
   return (
-    <Card className="col-span-6 row-span-6 col-start-8 row-start-1 flex flex-col items-center gap-8">
+    <Card className="col-span-6 row-span-6 col-start-8 row-start-1 flex flex-col items-center gap-6">
       <CardTitle title="Projects" icon={FaBriefcase} />
       <CardList
         items={projectDetails}
@@ -20,7 +20,7 @@ const ProjectsCard = () => {
         renderItem={(project) => (
           <div
             key={project.name}
-            className="border border-primaryBorder text-primaryForeground px-2 py-2 rounded-3xl flex flex-col lg:flex-row justify-start items-start gap-4"
+            className="border border-primaryBorder text-primaryForeground px-2 py-2 rounded-3xl flex flex-col lg:flex-row justify-start items-start gap-4 lg:h-max overflow-x-auto"
           >
             <Image
               src={project.imgLink}
@@ -38,7 +38,7 @@ const ProjectsCard = () => {
                 </span>
               </div>
 
-              <div className="flex flex-col lg:flex-row items-center gap-2">
+              <div className="flex flex-col lg:flex-row items-center gap-2 flex-wrap">
                 <Pill
                   name="Live Project"
                   url={project.siteLink}

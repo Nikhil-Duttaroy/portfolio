@@ -8,17 +8,17 @@ import Pill from "./Pill.component";
 
 const SocialCard = () => {
   return (
-    <Card className="col-span-4 row-span-3 col-start-4 row-start-7 flex flex-col gap-8 ">
+    <Card className="col-span-4 row-span-3 col-start-4 row-start-7 flex flex-col items-center gap-6 ">
       <CardTitle title="Online Presence" icon={FaRocket} />
       <CardList
         items={socialLinks}
-        className="grid grid-cols-1 lg:grid-cols-2 landscapes:grid-cols-2 w-fit self-center"
+        className="grid grid-cols-1 lg:grid-cols-2 landscapes:grid-cols-2 "
         renderItem={(social) => (
           <Pill
             key={social.name}
             icon={social.icons}
             name={social.name}
-            className="px-8 py-2 justify-start items-center gap-4 hover:text-primaryAccent hover:outline hover:outline-primaryAccent"
+            className="px-6 py-2 justify-center items-center gap-4 w-full hover:text-primaryAccent hover:outline hover:outline-primaryAccent"
             url={social.url}
           />
         )}
