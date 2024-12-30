@@ -15,7 +15,7 @@ export default function Home() {
     <motion.div
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.2, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
       className=" w-full h-dvh p-12 flex flex-col lg:grid lg:grid-cols-12 lg:grid-rows-9 gap-4 bg-darkBackground"
     >
       <IntroCard />
