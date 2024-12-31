@@ -75,6 +75,7 @@ const JokeCard = () => {
         <p>Api&apos;s fail sometimes</p>
       ) : (
         <p className="text-secondaryForeground text-sm overflow-y-auto h-10 ">
+          <b>Intresting Fact : </b>
           {jokeState.joke}
         </p>
       )}
