@@ -9,6 +9,7 @@ import { BiLogoTypescript } from "react-icons/bi";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { TbBrandSolidjs } from "react-icons/tb";
 import { SiRedux } from "react-icons/si";
+import { FaDocker } from "react-icons/fa";
 
 export const techStack = [
   {
@@ -40,6 +41,10 @@ export const techStack = [
     name: "Solid JS",
   },
   {
+    icons: <IoLogoReact size={20} />,
+    name: "React Native",
+  },
+  {
     icons: <RiTailwindCssFill size={20} />,
     name: "Tailwind CSS",
   },
@@ -50,5 +55,9 @@ export const techStack = [
   {
     icons: <IoLogoFigma size={20} />,
     name: "Figma",
+  },
+  {
+    icons: <FaDocker size={20} />,
+    name: "Docker",
   },
 ];
