@@ -9,8 +9,8 @@ import Pill from "./Pill.component";
 
 const ConnectCard = () => {
   return (
-    <Card className="col-span-6 row-span-2 col-start-8 row-start-7 flex flex-col gap-6 ">
-      <CardTitle title="Let's Work Together " icon={HiMiniSquare3Stack3D} />
+    <Card className="col-span-6 row-span-2 col-start-8 row-start-7 flex flex-col gap-6  justify-center ">
+      <CardTitle title="Your Vision, My Code" icon={HiMiniSquare3Stack3D} />
       <CardList
         items={connectLinks}
         className="flex flex-col lg:flex-row w-full justify-center"
