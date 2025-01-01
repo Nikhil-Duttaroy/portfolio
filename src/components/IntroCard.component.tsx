@@ -15,7 +15,7 @@ const IntroCard = () => {
           alt="Profile Picture"
           width={100}
           height={100}
-          className="object-cover w-[35%] aspect-square rounded-3xl"
+          className="object-cover w-[35%] aspect-square rounded-full"
           priority
         />
         <div className="flex flex-col my-2 justify-between gap-2 lg:gap-0">
