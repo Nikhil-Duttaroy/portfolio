@@ -34,9 +34,9 @@ const ProjectsCard = () => {
               priority
             />
             <div className="flex flex-col gap-2 items-center justify-around h-full w-full">
-              <div className="text-primaryForeground text-base lg:text-xl font-semibold flex flex-col items-center lg:items-baseline">
+              <div className="text-primaryForeground text-base lg:text-xl font-semibold flex flex-col items-center lg:items-baseline gap-2">
                 {project.name}
-                <span className="text-secondaryForeground text-xs font-normal leading-3 w-[90%] lg:w-full landscapes:w-full">
+                <span className="text-secondaryForeground text-xs font-normal leading-4 w-[90%] lg:w-full landscapes:w-full">
                   {project.description}
                 </span>
               </div>
