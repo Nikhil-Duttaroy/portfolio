@@ -8,7 +8,10 @@ import { motion } from "motion/react";
 const IntroCard = () => {
   const text = "Software Developer".split("");
   return (
-    <Card className="col-span-4 row-span-4 col-start-4 row-start-3 flex flex-col">
+    <Card
+      className="col-span-4 row-span-4 col-start-4 row-start-3 flex flex-col"
+      type="intro"
+    >
       <div className=" w-full flex gap-4">
         <Image
           src="/assets/Nikhil.jpeg"

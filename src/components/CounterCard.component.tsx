@@ -11,7 +11,10 @@ interface CounterCardProps {
 
 const CounterCard = ({ count, icon: Icon, label }: CounterCardProps) => {
   return (
-    <Card className="col-span-2 row-span-2 flex flex-col justify-around items-center">
+    <Card
+      className="col-span-2 row-span-2 flex flex-col justify-around items-center"
+      type="counter"
+    >
       <div className="flex justify-center items-center gap-2">
         <h1 className="text-7xl">{count}</h1>
         <CalendlyEmbed

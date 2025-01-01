@@ -8,7 +8,10 @@ import Pill from "./Pill.component";
 
 const TechStackCard = () => {
   return (
-    <Card className="col-span-3 row-span-full flex flex-col items-center gap-6">
+    <Card
+      className="col-span-3 row-span-full flex flex-col items-center gap-6"
+      type="tech"
+    >
       <CardTitle title="Tech Arsenal" icon={HiMiniSquare3Stack3D} />
       <CardList
         items={techStack}

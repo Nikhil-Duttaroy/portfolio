@@ -8,7 +8,10 @@ import Pill from "./Pill.component";
 
 const SocialCard = () => {
   return (
-    <Card className="col-span-4 row-span-3 col-start-4 row-start-7 flex flex-col items-center gap-6  justify-center">
+    <Card
+      className="col-span-4 row-span-3 col-start-4 row-start-7 flex flex-col items-center gap-6  justify-center"
+      type="social"
+    >
       <CardTitle title="Online Presence" icon={FaRocket} />
       <CardList
         items={socialLinks}

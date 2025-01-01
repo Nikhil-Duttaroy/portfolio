@@ -12,7 +12,10 @@ import Pill from "./Pill.component";
 
 const ProjectsCard = () => {
   return (
-    <Card className="col-span-6 row-span-6 col-start-8 row-start-1 flex flex-col items-center gap-6">
+    <Card
+      className="col-span-6 row-span-6 col-start-8 row-start-1 flex flex-col items-center gap-6"
+      type="projects"
+    >
       <CardTitle title="Projects" icon={FaBriefcase} />
       <CardList
         items={projectDetails}

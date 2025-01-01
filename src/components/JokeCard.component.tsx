@@ -50,7 +50,10 @@ const JokeCard = () => {
   }, []);
 
   return (
-    <Card className="col-span-6 row-span-1 col-start-8 row-start-9 flex justify-center items-center text-secondaryForeground text-sm">
+    <Card
+      className="col-span-6 row-span-1 col-start-8 row-start-9 flex justify-center items-center text-secondaryForeground text-sm"
+      type="joke"
+    >
       {jokeState.loading ? (
         <div role="status">
           <svg
