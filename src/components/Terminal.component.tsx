@@ -3,6 +3,8 @@ import { AVAILABLE_COMMANDS } from "../Utils/terminalCommands";
 import { FaTerminal } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { motion } from "motion/react";
+import { socialLinks } from "@/Utils/socialLinks";
+import { projectDetails } from "@/Utils/projectsDetails";
 
 interface Command {
   command: string;
@@ -23,22 +25,57 @@ export function Terminal() {
   }, [isOpen]);
 
   const handleCommand = (cmd: string) => {
-    const normalizedCmd = cmd.toLowerCase().trim();
+    const normalizedCmd = cmd.toLowerCase().trim().replace(/\s+/g, "");
     let output = "";
 
-    if (normalizedCmd === "clear") {
-      setHistory([]);
-      return;
+    switch (true) {
+      case normalizedCmd === "clear":
+        setHistory([]);
+        return;
+
+      case normalizedCmd in AVAILABLE_COMMANDS:
+        output =
+          AVAILABLE_COMMANDS[normalizedCmd as keyof typeof AVAILABLE_COMMANDS];
+        break;
+
+      case !!socialLinks.find(
+        (link) => link.name.toLowerCase().replace(/\s+/g, "") === normalizedCmd
+      ):
+        const socialLink = socialLinks.find(
+          (link) =>
+            link.name.toLowerCase().replace(/\s+/g, "") === normalizedCmd
+        )!;
+        window.open(socialLink.url, "_blank");
+        output = `Redirecting to ${socialLink.name}...`;
+        break;
+
+      case normalizedCmd === "schedule":
+        window.open("https://calendly.com/nsdr2000/30min", "_blank");
+        output = "Redirecting to schedule a call...";
+        break;
+
+      case normalizedCmd === "email":
+        window.open("mailto:nsdr2000@gmail.com", "_blank");
+        output = "Redirecting to send an email...";
+        break;
+
+      case !!projectDetails.find(
+        (project) =>
+          project.name.toLowerCase().replace(/\s+/g, "") === normalizedCmd
+      ):
+        const project = projectDetails.find(
+          (project) =>
+            project.name.toLowerCase().replace(/\s+/g, "") === normalizedCmd
+        )!;
+        window.open(project.githubLink, "_blank");
+        output = `Redirecting to ${project.name} GitHub page...`;
+        break;
+
+      default:
+        output = `Command not found: ${cmd}. Type 'help' for available commands.`;
     }
 
-    if (normalizedCmd in AVAILABLE_COMMANDS) {
-      output =
-        AVAILABLE_COMMANDS[normalizedCmd as keyof typeof AVAILABLE_COMMANDS];
-    } else if (normalizedCmd !== "") {
-      output = `Command not found: ${cmd}. Type 'help' for available commands.`;
-    }
-
-    setHistory([...history, { command: cmd, output }]);
+    setHistory((prev) => [...prev, { command: cmd, output }]);
     setInput("");
 
     setTimeout(() => {
