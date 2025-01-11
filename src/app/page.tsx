@@ -12,7 +12,7 @@ import { Terminal } from "@/components/Terminal.component";
 
 export default function Home() {
   return (
-    <div className=" w-full h-dvh p-12 2xl:p-24 flex flex-col lg:grid lg:grid-cols-12 lg:grid-rows-9 gap-4 bg-darkBackground">
+    <div className=" w-full h-dvh p-12 2xl:p-24 flex flex-col landscapes:flex landscapes:flex-col landscapes:h-full lg:grid lg:grid-cols-12 lg:grid-rows-9 gap-4 bg-darkBackground">
       <IntroCard />
       <ProjectCounter />
       <ExperienceCounter />
