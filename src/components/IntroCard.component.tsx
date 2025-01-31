@@ -5,6 +5,8 @@ import { FaDownload } from "react-icons/fa6";
 import { introTags } from "../Utils/introTags";
 import Pill from "./Pill.component";
 import { motion } from "motion/react";
+import profilePic from "../../public/assets/Nikhil.jpeg";
+
 const IntroCard = () => {
   const text = "Software Developer".split("");
   return (
@@ -14,12 +16,13 @@ const IntroCard = () => {
     >
       <div className=" w-full flex gap-4">
         <Image
-          src="/assets/Nikhil.jpeg"
+          src={profilePic}
           alt="Profile Picture"
           width={100}
           height={100}
           className="object-cover w-[35%] aspect-square rounded-full"
           priority
+          placeholder="blur"
         />
         <div className="flex flex-col my-2 justify-between gap-2 lg:gap-0">
           <div className="text-secondaryForeground text-xs flex items-center justify-between gap-2">
