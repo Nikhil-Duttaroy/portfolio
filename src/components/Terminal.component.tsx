@@ -4,7 +4,10 @@ import { FaTerminal } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { motion } from "motion/react";
 import { socialLinks } from "@/Utils/socialLinks";
-import { projectDetails } from "@/Utils/projectsDetails";
+import {
+  personalProjectDetails,
+  professionalProjectDetails,
+} from "@/Utils/projectsDetails";
 
 interface Command {
   command: string;
@@ -17,6 +20,10 @@ export function Terminal() {
   const [history, setHistory] = useState<Command[]>([]);
   const terminalRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const projectDetails = [
+    ...professionalProjectDetails,
+    ...personalProjectDetails,
+  ];
 
   useEffect(() => {
     if (isOpen && inputRef.current) {
@@ -67,8 +74,13 @@ export function Terminal() {
           (project) =>
             project.name.toLowerCase().replace(/\s+/g, "") === normalizedCmd
         )!;
-        window.open(project.githubLink, "_blank");
-        output = `Redirecting to ${project.name} GitHub page...`;
+        if (project?.githubLink) {
+          window.open(project?.githubLink, "_blank");
+          output = `Redirecting to ${project.name} GitHub page...`;
+        } else {
+          window.open(project?.siteLink, "_blank");
+          output = `Redirecting to ${project.name} `;
+        }
         break;
 
       default:
