@@ -23,11 +23,11 @@ const ProjectsCard = () => {
         <CardTitle title="Personal Projects" icon={FaBriefcase} />
         <CardList
           items={personalProjectDetails}
-          className="grid grid-cols-1 lg:grid-cols-1 landscapes:grid-cols-2 gap-4 overflow-y-auto overflow-x-hidden w-full h-auto"
+          className="grid grid-cols-1 lg:grid-cols-1 landscapes:grid-cols-2 gap-4 overflow-y-auto overflow-x-hidden w-full snap-y snap-mandatory"
           renderItem={(project) => (
             <div
               key={project.name}
-              className="border border-primaryBorder text-primaryForeground px-2 py-2 rounded-3xl flex flex-col lg:flex-row justify-start items-start gap-4 lg:h-max overflow-x-auto"
+              className=" border border-primaryBorder text-primaryForeground px-2 py-2 rounded-3xl flex flex-col lg:flex-row justify-start items-start gap-4 lg:h-max overflow-x-auto snap-center"
             >
               <Image
                 src={project.imgLink}
@@ -40,7 +40,7 @@ const ProjectsCard = () => {
               <div className="flex flex-col gap-2 items-center justify-around h-full w-full">
                 <div className="text-primaryForeground text-base lg:text-xl font-semibold flex flex-col items-center lg:items-baseline gap-2">
                   {project.name}
-                  <span className="text-secondaryForeground text-xs font-normal leading-4 w-[90%] lg:w-full landscapes:w-full">
+                  <span className="text-secondaryForeground text-xs font-normal leading-4 w-[90%] lg:w-full landscapes:w-full line-clamp-3">
                     {project.description}
                   </span>
                 </div>
@@ -72,11 +72,11 @@ const ProjectsCard = () => {
         <CardTitle title="Professional Projects" icon={FaBriefcase} />
         <CardList
           items={professionalProjectDetails}
-          className="grid grid-cols-1 lg:grid-cols-1 landscapes:grid-cols-2 gap-4 overflow-y-auto overflow-x-hidden w-full "
+          className="grid grid-cols-1 lg:grid-cols-1 landscapes:grid-cols-2 gap-4 overflow-y-auto overflow-x-hidden w-full snap-y snap-mandatory"
           renderItem={(project) => (
             <div
               key={project.name}
-              className="border border-primaryBorder text-primaryForeground px-2 py-2 rounded-3xl flex flex-col lg:flex-row justify-start items-start gap-4 lg:h-max overflow-x-auto"
+              className="border border-primaryBorder text-primaryForeground px-2 py-2 rounded-3xl flex flex-col lg:flex-row justify-start items-start gap-4 lg:h-max overflow-x-auto snap-center "
             >
               <Image
                 src={project.imgLink}
@@ -90,7 +90,7 @@ const ProjectsCard = () => {
               <div className="flex flex-col gap-2 items-center justify-around h-full w-full">
                 <div className="text-primaryForeground text-base lg:text-xl font-semibold flex flex-col items-center lg:items-baseline gap-2">
                   {project.name}
-                  <span className="text-secondaryForeground text-xs font-normal leading-4 w-[90%] lg:w-full landscapes:w-full">
+                  <span className="text-secondaryForeground text-xs font-normal leading-4 w-[90%] lg:w-full landscapes:w-full line-clamp-3">
                     {project.description}
                   </span>
                 </div>
