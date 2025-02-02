@@ -37,7 +37,7 @@ const ProjectsCard = () => {
                 className="object-cover rounded-3xl aspect-viedo self-center"
                 priority
               />
-              <div className="flex flex-col gap-2 items-center justify-around h-full w-full">
+              <div className="flex flex-col gap-2 items-start justify-around h-full w-full">
                 <div className="text-primaryForeground text-base lg:text-xl font-semibold flex flex-col items-center lg:items-baseline gap-2">
                   {project.name}
                   <span className="text-secondaryForeground text-xs font-normal leading-4 w-[90%] lg:w-full landscapes:w-full line-clamp-3">
@@ -87,7 +87,7 @@ const ProjectsCard = () => {
                 priority
                 placeholder="blur"
               />
-              <div className="flex flex-col gap-2 items-center justify-around h-full w-full">
+              <div className="flex flex-col gap-2 items-start justify-around h-full w-full">
                 <div className="text-primaryForeground text-base lg:text-xl font-semibold flex flex-col items-center lg:items-baseline gap-2">
                   {project.name}
                   <span className="text-secondaryForeground text-xs font-normal leading-4 w-[90%] lg:w-full landscapes:w-full line-clamp-3">
@@ -95,7 +95,7 @@ const ProjectsCard = () => {
                   </span>
                 </div>
 
-                <div className="flex flex-col lg:flex-row items-start gap-2 flex-wrap md:w-full">
+                <div className="flex flex-col lg:flex-row items-center gap-2 flex-wrap w-full">
                   <Pill
                     name="Live Project"
                     url={project.siteLink}
