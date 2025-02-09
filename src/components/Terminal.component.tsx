@@ -35,10 +35,22 @@ export function Terminal() {
     const normalizedCmd = cmd.toLowerCase().trim().replace(/\s+/g, "");
     let output = "";
 
+    const handleOpenLink = (url: string, message: string) => {
+      window.open(url, "_blank");
+      return message;
+    };
+
     switch (true) {
       case normalizedCmd === "clear":
         setHistory([]);
         return;
+
+      case normalizedCmd === "sudosecret":
+        output = handleOpenLink(
+          "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "Root access granted..."
+        );
+        break;
 
       case normalizedCmd in AVAILABLE_COMMANDS:
         output =
@@ -52,18 +64,24 @@ export function Terminal() {
           (link) =>
             link.name.toLowerCase().replace(/\s+/g, "") === normalizedCmd
         )!;
-        window.open(socialLink.url, "_blank");
-        output = `Redirecting to ${socialLink.name}...`;
+        output = handleOpenLink(
+          socialLink.url,
+          `Redirecting to ${socialLink.name}...`
+        );
         break;
 
       case normalizedCmd === "schedule":
-        window.open("https://calendly.com/nsdr2000/30min", "_blank");
-        output = "Redirecting to schedule a call...";
+        output = handleOpenLink(
+          "https://calendly.com/nsdr2000/30min",
+          "Redirecting to schedule a call..."
+        );
         break;
 
       case normalizedCmd === "email":
-        window.open("mailto:nsdr2000@gmail.com", "_blank");
-        output = "Redirecting to send an email...";
+        output = handleOpenLink(
+          "mailto:nsdr2000@gmail.com",
+          "Redirecting to send an email..."
+        );
         break;
 
       case !!projectDetails.find(
@@ -84,7 +102,7 @@ export function Terminal() {
         break;
 
       default:
-        output = `Command not found: ${cmd}. Type 'help' for available commands.`;
+        output = `Command not found: ${cmd}`;
     }
 
     setHistory((prev) => [...prev, { command: cmd, output }]);
