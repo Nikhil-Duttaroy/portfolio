@@ -4,6 +4,7 @@ import YoutubeClone from "../../public/assets/Youtube.png";
 import Portfolio from "../../public/assets/Portfolio.png";
 import JioStream from "../../public/assets/JioStream.png";
 import JioWatch from "../../public/assets/JioWatch.png";
+import ShortUrl from "../../public/assets/ShortUrl.png";
 
 export const personalProjectDetails = [
   {
@@ -17,12 +18,12 @@ export const personalProjectDetails = [
   },
   {
     id: 2,
-    name: "Shoppers Loop",
+    name: "Short Url",
     description:
-      "A Voice Enabled E-commerce website. It uses React, Firebase, and Alan AI for voice recognition.",
-    imgLink: ShoppersLoop,
-    siteLink: "https://shoppersloop.onrender.com/",
-    githubLink: "https://github.com/Nikhil-Duttaroy/ShoopersLoop",
+      "A Full Stack MERN Application for shortening URLs. It uses ReactJS, NodeJS, ExpressJS, and MongoDB.",
+    imgLink: ShortUrl,
+    siteLink: "https://isyoururlshort.netlify.app/login",
+    githubLink: "https://github.com/Nikhil-Duttaroy/Short_URL",
   },
   {
     id: 3,
@@ -34,7 +35,17 @@ export const personalProjectDetails = [
     githubLink: "https://github.com/Nikhil-Duttaroy/Youtube-Clone",
   },
   {
-    id: 3,
+    id: 4,
+    name: "Shoppers Loop",
+    description:
+      "A Voice Enabled E-commerce website. It uses React, Firebase, and Alan AI for voice recognition.",
+    imgLink: ShoppersLoop,
+    siteLink: "https://shoppersloop.onrender.com/",
+    githubLink: "https://github.com/Nikhil-Duttaroy/ShoopersLoop",
+  },
+
+  {
+    id: 5,
     name: "Simple Portfolio Website",
     description:
       "A Simple Portfolio Website. It uses ReactJS and Tailwind CSS.",
