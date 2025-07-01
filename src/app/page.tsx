@@ -1,4 +1,3 @@
-"use client";
 import ConnectCard from "@/components/ConnectCard.component";
 import ExperienceCounter from "@/components/ExperinceCounter.component";
 import IntroCard from "@/components/IntroCard.component";

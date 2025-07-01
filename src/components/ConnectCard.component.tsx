@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Card from "./Card/Card.component";
 import { HiMiniSquare3Stack3D } from "react-icons/hi2";
