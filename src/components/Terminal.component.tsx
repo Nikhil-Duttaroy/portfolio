@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useRef, useEffect } from "react";
 import { AVAILABLE_COMMANDS } from "../Utils/terminalCommands";
 import { FaTerminal } from "react-icons/fa";
@@ -45,7 +47,7 @@ export function Terminal() {
         setHistory([]);
         return;
 
-      case normalizedCmd === "sudosecret":
+      case normalizedCmd === "sudo":
         output = handleOpenLink(
           "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
           "Root access granted..."
