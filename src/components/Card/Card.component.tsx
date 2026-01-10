@@ -6,13 +6,13 @@ import dynamic from "next/dynamic";
 interface cardProps {
   className?: string;
   type?:
-    | "tech"
-    | "intro"
-    | "social"
-    | "connect"
-    | "projects"
-    | "counter"
-    | "joke";
+  | "tech"
+  | "intro"
+  | "social"
+  | "connect"
+  | "projects"
+  | "counter"
+  | "joke";
   children?: ReactNode;
 }
 
@@ -36,16 +36,24 @@ const Card = ({ className, type, children }: cardProps) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const animations = {
-    tech: { x: ["-100%", 0], opacity: [0, 1] },
-    intro: { opacity: [0, 1], scale: [0, 1] },
-    social: { y: ["100%", 0], opacity: [0, 1] },
-    connect: { x: ["100%", 0], opacity: [0, 1] },
-    projects: { x: ["100%", 0], opacity: [0, 1] },
-    counter: { y: ["-100%", 0], opacity: [0, 1] },
-    joke: { x: ["100%", 0], opacity: [0, 1] },
-    default: { opacity: [0, 1], scale: [0, 1] },
+  const variants = {
+    tech: { initial: { x: "-100%", opacity: 0 }, animate: { x: 0, opacity: 1 } },
+    intro: { initial: { scale: 0, opacity: 0 }, animate: { scale: 1, opacity: 1 } },
+    social: { initial: { y: "100%", opacity: 0 }, animate: { y: 0, opacity: 1 } },
+    connect: { initial: { x: "100%", opacity: 0 }, animate: { x: 0, opacity: 1 } },
+    projects: {
+      initial: { x: "100%", opacity: 0 },
+      animate: { x: 0, opacity: 1 },
+    },
+    counter: {
+      initial: { y: "-100%", opacity: 0 },
+      animate: { y: 0, opacity: 1 },
+    },
+    joke: { initial: { x: "100%", opacity: 0 }, animate: { x: 0, opacity: 1 } },
+    default: { initial: { scale: 0, opacity: 0 }, animate: { scale: 1, opacity: 1 } },
   };
+
+  const selectedVariant = variants[type || "default"];
 
   return isMobile ? (
     <div
@@ -55,8 +63,9 @@ const Card = ({ className, type, children }: cardProps) => {
     </div>
   ) : (
     <MotionDiv
-      initial={{ opacity: 0 }}
-      animate={animations[type || "default"]}
+      initial={selectedVariant.initial}
+      animate={selectedVariant.animate}
+      whileHover={{ scale: 1.02 }}
       transition={{
         duration: 0.5,
         type: "spring",

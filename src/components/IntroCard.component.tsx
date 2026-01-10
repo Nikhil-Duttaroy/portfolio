@@ -29,11 +29,12 @@ const IntroCard = () => {
           <div className="text-secondaryForeground text-xs flex items-center justify-between gap-2">
             <div className="flex justify-center items-center gap-2 text-xs lg:text-sm">
               <span className="bg-green-500 size-2 rounded-full "></span>
-              Avaialble to Work
+              Building @ Juspay
             </div>
             <a
               href="/Nikhil_Duttaroy.pdf"
               download
+              aria-label="Download Resume"
               className="bg-secondaryBackground px-2 py-1 rounded-md border border-primaryBorder hover:border-primaryAccent transition-all"
             >
               <FaDownload
@@ -61,6 +62,10 @@ const IntroCard = () => {
                 </motion.span>
               ))}
             </span>
+            <span className="text-xs text-secondaryForeground">
+              @ Juspay | Ex-Jio
+            </span>
+
           </div>
         </div>
       </div>

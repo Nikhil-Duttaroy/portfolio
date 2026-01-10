@@ -17,7 +17,7 @@ export const introTags = [
   },
   {
     icons: <span className="text-primaryAccent">@</span>,
-    name: "Reliance Jio",
+    name: "Juspay | Ex Reliance Jio",
   },
   {
     icons: <FaDev className="text-primaryAccent" />,
